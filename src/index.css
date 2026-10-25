@@ -5,12 +5,14 @@
   --muted: #616e7c;
   --bg: #f7f8fa;
   --radius: 12px;
+
   font-family:
     system-ui,
     -apple-system,
     "Segoe UI",
     Roboto,
     sans-serif;
+
   color: var(--text);
   background: var(--bg);
 }
@@ -18,10 +20,12 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
 }
 
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -30,18 +34,38 @@ body {
   background: var(--green);
   color: #fff;
 }
+
 .logo {
   margin: 0;
   font-size: 1.4rem;
 }
+
 .nav {
   display: flex;
   gap: 1.25rem;
 }
+
 .nav a {
   color: #fff;
   text-decoration: none;
 }
+
+/* Navigation buttons */
+.link {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: #fff;
+  cursor: pointer;
+}
+
+.link.danger {
+  color: #b3261e;
+  font-size: 0.9rem;
+}
+
+/* Cart badge */
 .badge {
   background: #fff;
   color: var(--green);
@@ -51,36 +75,46 @@ body {
   font-size: 0.85rem;
 }
 
+/* Main container */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 1.5rem;
 }
+
 .section-title {
   font-size: 1.2rem;
   margin: 1.5rem 0 0.75rem;
 }
-.grid {
+
+/* Grid layouts */
+.grid,
+.vendor-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1rem;
 }
 
+/* Cards */
 .card {
   background: #fff;
   border-radius: var(--radius);
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
+
 .card h2,
 .card h3 {
   margin: 0 0 0.25rem;
 }
+
 .vendor-card {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
+
+/* Vendor thumbnail */
 .thumb {
   width: 64px;
   height: 64px;
@@ -94,15 +128,20 @@ body {
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
+
+/* Text */
 .muted {
   color: var(--muted);
   margin: 0.2rem 0;
   font-size: 0.9rem;
 }
+
 .price {
   font-weight: 700;
   margin: 0.5rem 0;
 }
+
+/* Vendor status */
 .status {
   display: inline-block;
   margin-top: 0.4rem;
@@ -111,14 +150,18 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
 }
+
 .status.open {
   background: #e3f7e8;
   color: #1b7a3a;
 }
+
 .status.closed {
   background: #fdecea;
   color: #b3261e;
 }
+
+/* Buttons */
 .btn {
   width: 100%;
   padding: 0.55rem;
@@ -129,14 +172,129 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
+
 .btn:disabled {
   background: #c5cbd3;
   cursor: not-allowed;
 }
 
+/* Cart layout */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.cart-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-line {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.cart-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Quantity controls */
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid #c5cbd3;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Cart total */
+.line-total {
+  font-weight: 600;
+  margin: 0;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1rem 0 0;
+}
+
+/* Checkout form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.form input,
+.form select {
+  padding: 0.5rem;
+  border: 1px solid #c5cbd3;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.field-error {
+  color: #b3261e;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Error message */
+.error {
+  border-left: 4px solid #b3261e;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   color: var(--muted);
   padding: 2rem 1rem;
   font-size: 0.85rem;
+}
+
+/* Responsive layout */
+@media (max-width: 720px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-line {
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+  }
+
+  .line-total {
+    text-align: left;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .header {
+    padding: 1rem;
+  }
 }

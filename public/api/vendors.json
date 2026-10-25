@@ -1,0 +1,113 @@
+[
+  {
+    "id": "YOURMATRIC-kafe-shafiq",
+    "name": "Kafe Shafiq",
+    "location": "Mahallah Ali, Block C",
+    "openHours": "8:00 am - 11:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "YOURMATRIC-m1",
+        "name": "Nasi Ayam",
+        "price": 8.5,
+        "category": "Food",
+        "popular": true
+      },
+      {
+        "id": "YOURMATRIC-m2",
+        "name": "Nasi Goreng",
+        "price": 7.5,
+        "category": "Food",
+        "popular": true
+      },
+      {
+        "id": "YOURMATRIC-m3",
+        "name": "Mee Goreng",
+        "price": 6.5,
+        "category": "Food",
+        "popular": false
+      },
+      {
+        "id": "YOURMATRIC-m4",
+        "name": "Chicken Chop",
+        "price": 12,
+        "category": "Food",
+        "popular": true
+      },
+      {
+        "id": "YOURMATRIC-m5",
+        "name": "French Fries",
+        "price": 5,
+        "category": "Snacks",
+        "popular": false
+      },
+      {
+        "id": "YOURMATRIC-m6",
+        "name": "Teh Tarik",
+        "price": 2.5,
+        "category": "Drinks",
+        "popular": true
+      },
+      {
+        "id": "YOURMATRIC-m7",
+        "name": "Milo Ais",
+        "price": 3.5,
+        "category": "Drinks",
+        "popular": true
+      },
+      {
+        "id": "YOURMATRIC-m8",
+        "name": "Chocolate Cake",
+        "price": 5.5,
+        "category": "Dessert",
+        "popular": false
+      }
+    ]
+  },
+  {
+    "id": "CLASSMATE1-kafe-aminah",
+    "name": "Kafe Aminah",
+    "location": "Mahallah Aminah",
+    "openHours": "8:00 am - 9:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "CLASSMATE1-m1",
+        "name": "Nasi Ayam Penyet",
+        "price": 9,
+        "category": "Food",
+        "popular": true
+      },
+      {
+        "id": "CLASSMATE1-m2",
+        "name": "Air Bandung",
+        "price": 3,
+        "category": "Drinks",
+        "popular": true
+      }
+    ]
+  },
+  {
+    "id": "CLASSMATE2-kafe-bilal",
+    "name": "Kafe Bilal",
+    "location": "Mahallah Bilal",
+    "openHours": "7:00 am - 10:00 pm",
+    "isOpen": true,
+    "menu": [
+      {
+        "id": "CLASSMATE2-m1",
+        "name": "Roti Canai",
+        "price": 2,
+        "category": "Food",
+        "popular": true
+      },
+      {
+        "id": "CLASSMATE2-m2",
+        "name": "Teh O Ais",
+        "price": 2,
+        "category": "Drinks",
+        "popular": false
+      }
+    ]
+  }
+]
